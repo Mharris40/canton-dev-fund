@@ -439,3 +439,60 @@ The following cross-cutting conditions supplement, rather than replace, mileston
 ### 10. Acceptance Scope Boundary
 
 Acceptance does not require rebuilding the entire private CompliLedger platform, open-sourcing proprietary reasoning implementation, broad new regulatory or connector libraries, multiple SDK languages, rebuilding unrelated portal foundations, customer-specific production applications, a standalone autonomous-finance product, unlimited integration support, or 24/7 managed-service support unless separately approved through formal scope change.
+
+---
+
+## Funding
+
+**Total Funding Request:** $385,000 USD, payable in fixed Canton Coin under the Foundation-approved conversion methodology.
+
+The request is the bottom-up USD cost basis for the approved scope: implementation and Canton/DAML specialist work; integration and continuous assurance; independent verification and developer tooling; four Canton-specific portal integrations; two full reference implementations and a bounded agentic-governance scenario; external security review, remediation/retesting, production readiness and deployment; and ecosystem adoption with six complete months of post-launch maintenance/adoption support.
+
+### Cost Basis
+
+| Category | USD |
+| --- | ---: |
+| Expected direct delivery cost | $332,400 |
+| Embedded delivery risk allowance | $49,860 |
+| Rounding / program headroom | $2,740 |
+| **Total** | **$385,000** |
+
+The delivery risk allowance is embedded within the milestone budgets. It is not a separate milestone and does not create payment independent of accepted deliverables. It addresses integration, remediation, deployment, and delivery uncertainty; it is not a currency hedge or guaranteed protection against CC/USD movement. Neither the allowance nor program headroom creates a separate automatic payment entitlement or authorizes transfers between milestone allocations.
+
+### Payment Breakdown by Milestone
+
+- **M1 — Canton-Native Foundation:** USD reference allocation **$40,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M2 — Continuous Assurance and Deterministic Integration:** USD reference allocation **$63,500**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M3 — Portable Decisions, Proof Infrastructure, and Independent Verification:** USD reference allocation **$28,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M4 — Developer Platform and Stakeholder Portals:** USD reference allocation **$58,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M5 — Reference Workflows and Reusable Governance:** USD reference allocation **$70,500**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M6 — Security, Production Readiness, Ecosystem Validation, and Production Deployment:** USD reference allocation **$84,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance of the production deployment and corresponding deliverables.
+- **M7 — Six-Month Maintenance and Ecosystem Adoption:** USD reference allocation **$41,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon final Committee acceptance of the maintenance/adoption deliverables and required evidence.
+- **Total:** USD reference allocation **$385,000**; **Fixed total CC award to be established at grant approval**.
+
+Each milestone payment is conditional on Committee acceptance of the corresponding milestone deliverables and required evidence, following the approved acceptance dependencies. The overlapping development schedule does not create payment entitlement. Payment is tied to accepted deliverables—not elapsed time. The USD allocations are cost references and do not guarantee a particular USD value of the CC received.
+
+### Volatility Stipulation
+
+If the project duration is **greater than 6 months**:  
+The grant is denominated in fixed Canton Coin and will require a re-evaluation at the 6-month mark.
+
+The approximately 15-month program—approximately nine months through accepted production launch followed by six complete months of maintenance/adoption support—therefore requires a formal six-month funding review. The grant effective date and corresponding review date must be established with the Foundation before final grant execution.
+
+The review will consider, as applicable, milestones accepted and in progress; remaining deliverables; payment status, including accepted-but-unpaid milestones; remaining fixed-CC allocations; material CC/USD movement; actual and forecast infrastructure/network costs; security-review and remediation costs; verified deployment requirements; approved scope changes; the production-launch forecast; and remaining M7 maintenance obligations.
+
+**The six-month re-evaluation is mandatory. Adjustment is not automatic.** Any proposed change to remaining CC amounts, milestone allocations, scope, acceptance conditions, or payment structure requires the applicable Foundation/Committee approval under the governing grant process and must be documented before taking effect. Review alone does not amend the award. This proposal creates no automatic repricing right or USD true-up, does not guarantee USD purchasing power, and does not assign all currency risk automatically to either party.
+
+### Grant-Execution Mechanics
+
+The full grant and all seven milestone allocations will be fixed in CC at grant approval under the Foundation-approved conversion methodology, subject only to subsequently approved amendments. Before final grant execution, the Foundation and CompliLedger must establish the approved CC/USD rate source, measurement/averaging window if applicable, fixing date, precision, rounding methodology, resulting fixed total CC award, and resulting fixed CC allocation for each milestone. These are grant-execution mechanics, not unresolved product-design decisions.
+
+### M7 Funding Treatment
+
+Milestone 7 begins only after accepted production launch under Milestone 6. Its six-month delivery period is separate from the grant’s mandatory six-month funding re-evaluation. If production launch moves, M7’s full six-month maintenance period moves with it; implementation delays do not shorten the maintenance obligation.
+
+The **$41,000 USD reference allocation** remains associated with M7 unless an approved amendment changes it. M7 payment remains subject to acceptance of the maintenance/adoption deliverables and required evidence, including six monthly reports and the final consolidated report under the approved acceptance criteria. Elapsed time alone is insufficient. Monthly reporting does not create automatic monthly payment entitlement.
+
+### Program Delay and Change Control
+
+Material Committee-requested scope changes, deployment-access changes, approved architecture changes, or funding amendments that affect remaining milestones must be documented through the applicable grant change/re-evaluation process and receive the required approvals. Changes to timing do not themselves reprice milestones, transfer allocations, or reduce the full post-launch maintenance period.
