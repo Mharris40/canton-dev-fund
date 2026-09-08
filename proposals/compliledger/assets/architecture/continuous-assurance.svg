@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Continuous Assurance Lifecycle</title>
+  <desc id="desc">State A current assurance transitions to State B after material change, then to State C after remediation and reassessment, preserving lineage without guaranteed restoration.</desc>
+  <rect width="1400" height="760" fill="#ffffff"/>
+
+  <text x="80" y="90" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600" fill="#111111">Continuous Assurance Lifecycle</text>
+  <text x="80" y="130" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#4b5563">Reassessment updates current assurance while preserving historical lineage.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="80" y="230" width="360" height="180" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="260" y="285" font-size="30" font-weight="600" fill="#111111">State A</text>
+    <text x="260" y="325" font-size="20" fill="#374151">Current assurance</text>
+    <text x="260" y="355" font-size="20" fill="#374151">supported by sufficient evidence</text>
+
+    <rect x="520" y="230" width="360" height="180" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="700" y="285" font-size="30" font-weight="600" fill="#111111">State B</text>
+    <text x="700" y="325" font-size="20" fill="#374151">Changed assurance after</text>
+    <text x="700" y="355" font-size="20" fill="#374151">material change and reassessment</text>
+
+    <rect x="960" y="230" width="360" height="180" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="1140" y="285" font-size="30" font-weight="600" fill="#111111">State C</text>
+    <text x="1140" y="325" font-size="20" fill="#374151">Restored or otherwise</text>
+    <text x="1140" y="355" font-size="20" fill="#374151">updated assurance</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#374151" text-anchor="middle">
+    <text x="480" y="210">Material change / reassessment</text>
+    <text x="920" y="210">Remediation / reassessment</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="442" y1="320" x2="516" y2="320"/>
+    <line x1="882" y1="320" x2="956" y2="320"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#6b7280">
+    <text x="80" y="520">• No automatic guarantee that State C matches State A.</text>
+    <text x="80" y="553">• Superseded states remain historically meaningful and queryable.</text>
+    <text x="80" y="586">• Current assurance must represent current support, limitations, or insufficiency.</text>
+  </g>
+
+  <line x1="80" y1="625" x2="1320" y2="625" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="80" y="675" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6b7280">Lineage is preserved across successor states for audit, verification, and operational traceability.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">CompliLedger × Canton Architecture</title>
+  <desc id="desc">Protected evidence and deterministic evaluation feed a funded Canton layer for authorized workflow consumption and independent verification with architecture details subject to technical verification.</desc>
+  <rect width="1400" height="900" fill="#ffffff"/>
+
+  <text x="80" y="90" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600" fill="#111111">CompliLedger × Canton Architecture</text>
+  <text x="80" y="130" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#4b5563">Reusable integration for governed assurance consumption and verification.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="80" y="190" width="570" height="280" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="110" y="235" font-size="24" font-weight="600" fill="#111111">Protected Domain</text>
+    <text x="110" y="272" font-size="18" fill="#374151">• Authorized source evidence and lineage</text>
+    <text x="110" y="304" font-size="18" fill="#374151">• CompliLedger AI-assisted orchestration</text>
+    <text x="110" y="336" font-size="18" fill="#374151">• Deterministic control evaluation and decisions</text>
+    <text x="110" y="368" font-size="18" fill="#374151">• Portable Decision + Canonical Proof packages</text>
+    <text x="110" y="400" font-size="18" fill="#374151">• Sensitive evidence and secrets remain protected</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="750" y="190" width="570" height="280" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="780" y="235" font-size="24" font-weight="600" fill="#111111">Funded Canton / DAML Layer</text>
+    <text x="780" y="272" font-size="18" fill="#374151">• Package/state associations and lifecycle updates</text>
+    <text x="780" y="304" font-size="18" fill="#374151">• Authorized interfaces and workflow policies</text>
+    <text x="780" y="336" font-size="18" fill="#374151">• Privacy-preserving disclosure boundaries</text>
+    <text x="780" y="368" font-size="18" fill="#374151">• Provenance, versions, and successor lineage</text>
+    <text x="780" y="400" font-size="18" fill="#374151">• Architecture choices subject to verification</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="652" y1="330" x2="744" y2="330"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="80" y="550" width="570" height="220" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="110" y="595" font-size="24" font-weight="600" fill="#111111">Authorized Workflow Consumption</text>
+    <text x="110" y="632" font-size="18" fill="#374151">• Advisory and execution-gated consumption patterns</text>
+    <text x="110" y="664" font-size="18" fill="#374151">• Purpose/target/actor/freshness constrained reuse</text>
+    <text x="110" y="696" font-size="18" fill="#374151">• Human approval where policy requires</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="750" y="550" width="570" height="220" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="780" y="595" font-size="24" font-weight="600" fill="#111111">Independent Verification</text>
+    <text x="780" y="632" font-size="18" fill="#374151">• Package integrity</text>
+    <text x="780" y="664" font-size="18" fill="#374151">• Provenance and relevant Canton state</text>
+    <text x="780" y="696" font-size="18" fill="#374151">• Reproduction where authorized and supported</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="1035" y1="472" x2="1035" y2="544"/>
+    <line x1="365" y1="472" x2="365" y2="544"/>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+</svg>
