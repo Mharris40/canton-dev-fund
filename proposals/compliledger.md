@@ -254,3 +254,110 @@ The funded layer will use explicit versioning for schemas, decision and proof pa
 Productionization will include compatibility and upgrade testing, supported-version documentation, migration guidance where necessary, regression testing of both reference workflows, and validation of lifecycle behavior across supported upgrades. The compatibility policy will describe supported combinations and any required consumer migration rather than promise compatibility with every past or future version. Exact requirements depend on the selected Canton/DAML/API versions, package design, deployment topology, integration surfaces, and supported upgrade policy; these will be established during funded architecture work and validated before production acceptance. No particular Canton upgrade mechanism or unconditional compatibility guarantee is assumed.
 
 No mandatory backward compatibility impact is expected for Canton applications that do not adopt the CompliLedger integration: they should not need to change their workflows solely because the infrastructure exists. Applications that opt in will follow the versioned integration interfaces and upgrade requirements defined and tested by the funded implementation.
+
+---
+
+## Milestones and Deliverables
+
+Development windows overlap; work may proceed in parallel and is not conditioned on the prior milestone payment. Acceptance dependencies remain sequential: **M1 → M2 → M3 → M4 → M5 → M6 → M7**. Each milestone requires completed deliverables and reproducible evidence, not merely elapsed time. Mandatory test cases and evidence must be traceable to the stated deliverables. Thresholds, supported environments, and adoption targets that remain unresolved must be documented and approved before their associated gate is evaluated; none are assumed below.
+
+### Milestone 1: Canton-Native Foundation
+
+- **Estimated Delivery:** Months 1–2.
+- **Focus:** Establish the reusable Canton-native architecture, executable foundation, readiness baseline, and technical dependencies.
+- **Deliverables / Value Metrics:**
+  - **Readiness and scope baseline:** Inventory existing CompliLedger capabilities, commercial prerequisites, and Canton-funded work separately. Map the protected scope to traceable deliverables; identify blocking prerequisites and assign responsible owners in a technical dependency register.
+  - **Architecture and representations:** Deliver Canton/DAML architecture, architecture decision records, and initial reusable integration components covering assurance state, deterministic decisions where appropriate, Portable Decision Packages, and Canonical Proof Packages.
+  - **Trust boundaries and interfaces:** Document and implement the initial privacy/visibility, authorization, lifecycle/version, protected/off-ledger evidence boundary, and request/result interface patterns in the executable foundation.
+  - **Executable evidence:** Establish CI, reproducible build/test instructions, initial automated tests, and conformance fixtures. Record valid-fixture acceptance, deliberate invalid-fixture rejection, positive and negative authorization results, and a clean-environment build/test run.
+  - **Security and deployment readiness:** Deliver an initial threat model and deployment/onboarding investigation. Record supporting evidence for verified deployment assumptions and explicitly mark unresolved assumptions and dependencies. Final production topology selection is not required at M1.
+  - **Canton ecosystem value:** A documented, executable foundation establishes reusable integration architecture rather than an application-specific design alone.
+  - **Gate metric:** All mandatory foundation/conformance and authorization tests pass; the clean-environment build/test succeeds; protected scope is traceable; blocking prerequisites have owners; deployment assumptions are explicitly verified or marked unresolved.
+
+### Milestone 2: Continuous Assurance and Deterministic Integration
+
+- **Estimated Delivery:** Months 2–4.
+- **Focus:** Integrate existing CompliLedger reasoning with the Canton layer and demonstrate assurance changing as conditions change.
+- **Deliverables / Value Metrics:**
+  - **Reasoning integration:** Integrate requirements, target, and context; applicability and applicable-control outputs; evidence requirements, state, and sufficiency; deterministic assessments and decisions; and Canton request/result processing.
+  - **Continuous lifecycle:** Implement lifecycle synchronization, evidence freshness/expiry, material-change triggers, reassessment, successor/version lineage, stale/superseded handling, and remediation/retest flow. Support event-driven and scheduled reassessment where appropriate.
+  - **Consistency and recovery:** Implement idempotency, replay/recovery, and reconciliation, with an automated continuous-assurance integration harness and recorded case results.
+  - **Required lifecycle demonstration:**
+    - **State A:** Current evidence supports the applicable control → deterministic decision → current assurance.
+    - **Transition to State B:** Material change or expiry → evidence refresh or insufficiency detection → reassessment → changed, stale, insufficient, or not-satisfied assurance.
+    - **Transition to State C:** Remediation → new evidence → reassessment → restored or otherwise updated assurance, retaining successor/version lineage.
+  - **Required negative and consistency cases:** Show that stale, insufficient, conflicting, and manual-review-required evidence cannot produce unsupported satisfaction; identical deterministic inputs and rule versions reproduce deterministic outputs; duplicate/replayed events cannot create contradictory current state; interrupted processing recovers to consistent state; and consumers distinguish current assurance from superseded or expired assurance.
+  - **Measured operation:** Record reassessment latency and synchronization lag under a documented workload, including workload and measurement conditions. Final performance thresholds remain subject to approval rather than being invented at this milestone.
+  - **Canton ecosystem value:** Authorized consumers receive assurance that actually changes with underlying conditions, rather than an unchanged historical assertion.
+  - **Gate metric:** All mandatory lifecycle, sufficiency, determinism, idempotency, and recovery cases pass; the State A → State B → State C sequence and latency/lag measurements have reproducible evidence.
+
+### Milestone 3: Portable Decisions, Proof Infrastructure, and Independent Verification
+
+- **Estimated Delivery:** Months 3–5.
+- **Focus:** Deliver portable decisions, machine-verifiable proof, and independent verification without dependence on a proprietary portal.
+- **Deliverables / Value Metrics:**
+  - **Package infrastructure:** Implement the Portable Decision Package and Canonical Proof Package, canonical encoding, and a deterministic commitment/hash specification. Include Canton-native assurance/proof association and lifecycle, provenance, and version references.
+  - **Independent tooling:** Deliver an independent verifier library, standalone CLI or equivalent, verification API, and documentation covering execution, trust assumptions, supported checks, and limitation/error semantics.
+  - **Level 1 — Package Integrity:** Validate supported structure and canonical encoding, recompute commitments/hashes, detect tampering, and reject malformed packages. Integrity success must not claim evidence truth.
+  - **Level 2 — Authorized Provenance and Canton State:** Demonstrate the supported authorized Canton-state verification path, including supported origin, state, lifecycle, provenance, and version checks. Report missing access or unavailable state as explicit limitations.
+  - **Level 3 — Assessment Reproduction Where Supported:** Reproduce selected disclosed deterministic reference assessments using authorized evidence or reference fixtures and compare their results. Clearly identify checks that cannot be reproduced.
+  - **Verification evidence:** Provide valid, tampered, malformed, stale, and unavailable-data fixtures and expected results. Demonstrate appropriate stale-state reporting and ensure unsupported or unavailable properties are limitations, never verification success for those properties.
+  - **Portal-independent execution:** Record a clean-environment verifier run without ProofSync or another proprietary portal, using documented prerequisites and authorized access where required.
+  - **Canton ecosystem value:** Participants can independently verify supported package properties without relying on a proprietary stakeholder view or overstating what a proof establishes.
+  - **Gate metric:** All mandatory verification vectors pass; every result identifies what was verified, what failed or was unavailable, applicable versions, and verification level; clean-environment independent execution succeeds.
+
+### Milestone 4: Developer Platform and Stakeholder Portals
+
+- **Estimated Delivery:** Months 4–6.
+- **Focus:** Make the reusable Canton assurance infrastructure consumable by external developers and authorized stakeholders.
+- **Deliverables / Value Metrics:**
+  - **Developer interfaces:** Deliver one primary SDK, APIs, schemas, and appropriate DAML bindings/components. Cover authentication integration, decision/package consumption, independent verification integration, lifecycle and error handling, and an event/streaming interface where appropriate. SDK language remains subject to technical verification.
+  - **Integration materials:** Provide a quickstart, runnable sample integration, supported-environment instructions, release/version guidance, and developer documentation.
+  - **ProofSync integration:** Consume Canton-specific current assurance, decisions, proof, verification, lifecycle, and history.
+  - **AuditSync integration:** Provide governed assessment, evidence-lineage, decision, proof, verification, and audit-oriented access.
+  - **RegSync integration:** Provide authorized assurance, decision, proof, verification, and permitted lineage access.
+  - **DevSync integration:** Provide SDK, API, schema, documentation, and reference access.
+  - **Portal boundary and authorization evidence:** Integrate the four portals with the shared Canton layer; do not rebuild the portals. Record reproducible functional evidence and positive and negative authorization tests for all appropriate stakeholder paths.
+  - **Non-author integration exercise:** A non-author evaluator follows documented setup in a clean environment, authenticates, consumes a supported decision/package, independently verifies it, and processes a lifecycle update. The supported path must require no bespoke code changes, undocumented steps, or bespoke live employee assistance; standard documented credential provisioning is allowed.
+  - **Canton ecosystem value:** External developers and authorized stakeholders can consume the same assurance infrastructure through documented, reproducible integration paths.
+  - **Gate metric:** All mandatory SDK, interface, lifecycle, error, and authorization tests pass; all four portal integrations have reproducible functional evidence; the non-author clean-environment integration succeeds through documented steps.
+
+### Milestone 5: Reference Workflows and Reusable Governance
+
+- **Estimated Delivery:** Months 5–7.
+- **Focus:** Demonstrate reuse of the same shared infrastructure across materially different institutional workflows.
+- **Deliverables / Value Metrics:**
+  - **Reusable governed-consumption patterns:** Deliver patterns for applicable issuance, transfer, settlement, eligibility, approvals, custody/operational conditions, and human authorization. These are reusable patterns, not commitments to production-integrate every workflow class.
+  - **Reference Implementation 1 — Institutional Continuous Assurance:** Demonstrate State A → material change → State B → remediation → State C, using evidence refresh, sufficiency handling, deterministic reassessment, updated decisions and packages, successor lineage, and authorized stakeholder visibility. Record executable cases and the resulting state/package history.
+  - **Reference Implementation 2 — Tokenized RWA / Settlement:** Demonstrate a privacy-preserving multi-party workflow with freshness, authorization, governed consumption, and multi-party verification. Use synthetic assets, parties, requirements, and evidence unless an approved external integration becomes available. Demonstrate reuse of the same SDK, lifecycle model, Portable Decision Package, Canonical Proof Package, and verifier. This demonstration makes no claim of legal or regulatory compliance.
+  - **Bounded Agentic Financial Governance Scenario:** Demonstrate APPROVED, DENIED, and REQUIRE_APPROVAL outcomes; appropriately authorized human approval; bounded agent-to-agent delegation; an attempted authority/delegation violation and its rejection; action-integrity validation; execution lineage; and resulting machine-verifiable proof. This is a bounded scenario, not a third full reference implementation.
+  - **Shared-infrastructure evidence:** Provide dependency manifests and a reuse matrix showing that both references and the agentic scenario use the accepted shared components, rather than separate bespoke proof engines, lifecycle implementations, verification systems, or authorization mechanisms.
+  - **Canton ecosystem value:** The same infrastructure supports different workflow classes, providing demonstrated reuse rather than multiple isolated implementations.
+  - **Gate metric:** Two full reference implementations and one bounded agentic scenario are delivered; all mandatory lifecycle, privacy, authorization, freshness, governance, and delegation cases pass; dependency manifests and the reuse matrix demonstrate shared-component reuse.
+
+### Milestone 6: Security, Production Readiness, Ecosystem Validation, and Production Deployment
+
+- **Estimated Delivery:** Months 6–9; production acceptance remains subject to verified Canton deployment prerequisites.
+- **Focus:** Review, harden, externally validate, and deploy the integrated M1–M5 release.
+- **Deliverables / Value Metrics:**
+  - **Independent review:** Complete independent Canton/DAML/security review of the delivered integrated release, including privacy, authorization, and API/security review and adversarial testing. Identify reviewed versions and retain findings, remediation, and retest evidence, including independent retesting where scoped.
+  - **Finding disposition:** Remediate and retest all critical/high findings under the agreed severity model before production acceptance. Record documented dispositions for lower residual findings.
+  - **Readiness testing:** Execute performance, multi-party, lifecycle-scale, failure/recovery, and supported upgrade tests. Record results against pre-approved performance, recovery, and compatibility thresholds and the supported compatibility matrix.
+  - **Operational readiness:** Deliver deployment automation, monitoring, runbooks, incident/recovery procedures, and onboarding materials. Exercise recovery and supported upgrade procedures and complete operational handover.
+  - **External validation:** Record external developer execution of the agreed integration journey and independent third-party verification of supported packages, including rejection of invalid fixtures. Provide initial adoption evidence that identifies the activity performed without inventing adoption counts.
+  - **Production deployment:** Deploy the integrated release using the verified and approved Canton architecture; monitor the approved production environment and validate it end-to-end. Record deployment prerequisites, approvals, release identification, and production acceptance evidence. No production topology is assumed, and a sandbox demonstration cannot substitute for production acceptance.
+  - **Canton ecosystem value:** The shared infrastructure is independently reviewed, hardened, externally validated, operationally supported, and production deployed.
+  - **Gate metric:** All mandatory production-readiness tests pass; no critical/high findings remain unresolved; pre-approved performance/recovery/compatibility thresholds are met; required external validation exercises complete; operational handover and accepted production deployment have recorded evidence.
+
+### Milestone 7: Six-Month Maintenance and Ecosystem Adoption
+
+- **Estimated Delivery:** Six complete months beginning after accepted production launch; nominally Months 10–15 only if launch is accepted in Month 9. If production acceptance is delayed, the full six-month maintenance period moves with it.
+- **Focus:** Demonstrate sustained usability, security maintenance, bounded support, ecosystem engagement, and post-grant sustainability.
+- **Deliverables / Value Metrics:**
+  - **Bounded maintenance and support:** Provide six full months of corrective releases, security patches, supported compatibility updates, SDK and documentation maintenance, reference implementation upkeep, issue triage, and bounded developer and integration support, according to the approved support and vulnerability-handling policies.
+  - **Continuing usability evidence:** Keep supported integration and reference tests passing; record issue/vulnerability handling and release results. Maintain documentation aligned with supported interfaces and update implementation guidance using ecosystem feedback.
+  - **Adoption measurement:** Measure ecosystem engagement, feedback, support, and adoption against pre-approved definitions and targets. Distinguish internal testing, external evaluation, and active integration rather than treating them as interchangeable adoption evidence.
+  - **Monthly and final reporting:** Deliver six monthly evidence reports and a final consolidated maintenance/adoption report recording releases, security dispositions, compatibility, support activity, adoption outcomes, unresolved issues, and continuing ownership.
+  - **Sustainability handover:** Complete the post-funded-period ownership and sustainability handover, documenting continuing maintenance responsibilities and the disposition of outstanding items.
+  - **Canton ecosystem value:** Supported integrations remain usable and maintained after launch, with measured adoption outcomes and explicit continuing ownership.
+  - **Gate metric:** Six complete post-acceptance months are evidenced by six monthly reports plus the final consolidated report; maintained release, integration, and reference tests pass; support/adoption results are measured against pre-approved definitions and targets; no release-blocking issue remains unresolved without approved disposition. Elapsed time alone is insufficient for acceptance.
