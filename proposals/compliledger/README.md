@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero/hero-banner.svg" alt="CompliLedger × Canton hero: continuous assurance workflow" width="100%" />
+  <img src="./assets/hero/hero-banner.svg" alt="CompliLedger × Canton hero: AI-Native Compliance and Governance Infrastructure for Banks and Financial Institutions" width="100%" />
 </p>
 
 <h1 align="center">CompliLedger × Canton</h1>
