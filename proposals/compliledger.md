@@ -508,3 +508,19 @@ Upon production release, CompliLedger will collaborate with the Canton Foundatio
 - Developer/ecosystem promotion of the reusable SDK, verification tooling, reference implementations, and integration guidance.
 
 Public materials will distinguish demonstrated capabilities from planned capabilities. They will not disclose protected customer, enterprise, or evidence information.
+
+---
+
+## Motivation
+
+Institutional assurance still depends heavily on manual, fragmented, periodic, point-in-time processes, while financial infrastructure is becoming digital, tokenized, programmable, interconnected, and increasingly automated. Reconstructing assurance for each audit, counterparty, regulator, or internal workflow creates duplicated effort and leaves a gap between documented assessments and changing operational conditions.
+
+Canton participants would benefit from assurance that is continuously maintained and machine-verifiable rather than repeatedly assembled. Authorized institutions and their stakeholders could consume current, context-appropriate assurance while preserving privacy and checking supported properties independently, reducing repeated work without treating a historical determination as permanently valid.
+
+The proposed ecosystem value is shared infrastructure for applicability-aware assurance, automated evidence orchestration, deterministic decisions, and continuous reassessment. Portable Decision Packages, Canonical Proof Packages, independent verification, and authorized stakeholder and developer consumption would make those capabilities reusable across applications rather than confined to a single compliance interface.
+
+The intended operating-model shift is Manual → AI-Native; Periodic → Continuous; Point-in-Time → Real-Time / Near-Real-Time; Audit Prep → Audit-Ready; Reports → Machine-Verifiable Proof; and One-Time Assurance → Reusable, Continuous Operational Assurance. These are delivery objectives, not claims of universal automation or instantaneous updates: AI assists orchestration, consequential evaluations remain deterministic, and update timing depends on supported sources and operational constraints.
+
+The timing matters as regulated digital money and tokenized-asset activity develops, increasing the practical need to operationalize applicable requirements rather than merely describe them. Relevant context includes BSA/AML frameworks and <a href="https://www.fincen.gov/resources/statutes-regulations/guidance/application-fincens-regulations-certain-business-models">FinCEN guidance on virtual-currency business models</a>, <a href="https://ofac.treasury.gov/recent-actions/20211015">OFAC sanctions guidance for the virtual-currency industry</a>, and banking regulators' treatment of <a href="https://occ.gov/news-issuances/bulletins/2025/bulletin-2025-2.html">crypto-asset risk management</a> and <a href="https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-7.html">tokenized securities</a>. These illustrate digital-asset regulation and supervisory expectations, not a conclusion that every framework applies to every Canton participant. CompliLedger begins with applicability because obligations depend on the entity, activity, jurisdiction, and context; proof verification alone does not establish legal compliance.
+
+Canton would therefore gain more than another compliance application: it would gain reusable application-layer assurance infrastructure for institutional financial workflows, without requiring every application to independently rebuild the same assurance and verification machinery.
