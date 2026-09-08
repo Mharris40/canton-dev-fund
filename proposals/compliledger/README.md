@@ -4,7 +4,7 @@
 
 <h1 align="center">CompliLedger × Canton</h1>
 
-<p align="center"><strong>AI-Powered Proof Infrastructure for Continuous Institutional Assurance</strong></p>
+<p align="center"><strong>AI-Native Compliance and Governance Infrastructure for Banks and Financial Institutions</strong></p>
 
 <p align="center">
 Institutional assurance that converts requirements, context, and evidence into deterministic decisions, portable proof, and continuously updated assurance for authorized Canton workflows.
