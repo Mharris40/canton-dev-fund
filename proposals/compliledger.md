@@ -358,3 +358,84 @@ Development periods overlap; acceptance dependencies remain sequential: **M1 →
   - Post-funded-period ownership/sustainability handover documenting remaining responsibilities and supported boundaries. Support is bounded and does not imply unlimited integration assistance or 24/7 managed-service support.
   - **Ecosystem value:** The production integration remains usable and maintained while external adoption and continuing ownership are evidenced after launch.
   - **Gate metric:** Six complete post-acceptance months are evidenced by six monthly reports and the final consolidated report; maintained release and supported integration/reference tests pass; support/adoption results are measured against pre-approved definitions and targets; no unresolved release-blocking issue lacks an approved disposition; sustainability handover is complete. Elapsed time alone is insufficient for acceptance.
+
+---
+
+## Acceptance Criteria
+
+The Tech &amp; Ops Committee will evaluate completion based on:
+
+- Deliverables completed as specified for each milestone  
+- Demonstrated functionality or operational readiness  
+- Documentation and knowledge transfer provided  
+- Alignment with stated value metrics  
+
+The following cross-cutting conditions supplement, rather than replace, milestone-specific deliverables and gates. They apply to the funded CompliLedger Canton implementation at the applicable acceptance stage. Unresolved technical baselines, prerequisites, thresholds, and policies must be documented and approved before the affected gate; they must not be treated as satisfied by omission.
+
+### 1. Traceability and Reproducible Validation
+
+- Every funded deliverable must map to its approved requirement/scope, source revision, artifact/version, test or validation procedure, acceptance evidence, and applicable milestone. Each submission must identify the exact release and environment evaluated.
+- Documented build/setup procedures must reproduce the build from a clean supported environment. All mandatory automated tests, conformance fixtures, and supported integration/reference tests must pass; deliberately invalid fixtures must produce their expected failures. The supported technical baseline and tooling versions will be established during architecture work.
+- Screenshots and demonstrations may supplement, but must not replace, reproducible artifacts, procedures, and test results.
+
+### 2. Continuous Assurance, Evidence Safety, and Determinism
+
+- **Mandatory lifecycle demonstration:** **State A — Current Assurance:** current, sufficient evidence supports the applicable determination. **Material Change:** a relevant operational/evidence condition changes or expires. **State B — Updated Assurance:** evidence is refreshed or insufficiency identified, reassessment occurs, and the deterministic decision and assurance state change appropriately; previous assurance is no longer represented as current. **Remediation:** the condition is corrected, new evidence is collected and validated, and reassessment occurs. **State C — Restored or Otherwise Updated Assurance:** a new deterministic decision, assurance state, and proof/package state are produced as appropriate, preserving historical and successor lineage.
+- The implemented model must functionally distinguish current, superseded, stale, expired, insufficient, and changed/not-satisfied assurance, plus suspended/revoked states where used. Equivalent terminology is permitted; loss of the applicable functional distinctions is not.
+- Negative tests must show that stale, insufficient, conflicting, or manual-review-required evidence does not automatically produce a satisfied determination. Unavailable sufficient deterministic evidence must yield an explicit limitation, not fabricated certainty.
+- Identical deterministic inputs, applicable control definitions, rule versions, and relevant evidence state must reproduce deterministic assessment/decision content. Run-specific timestamps, execution IDs, and correlation IDs may differ but must be distinguished from that content. AI-assisted interpretation or orchestration must not silently replace deterministic consequential control evaluation.
+- Duplicate/replayed events and interrupted processing must not leave contradictory current assurance; tested recovery and reconciliation must restore consistent lifecycle state.
+
+### 3. Portable Packages and Independent Verification
+
+- Portable Decision Packages and Canonical Proof Packages must conform to their accepted schemas/versions. Canonical encoding and commitments/hashes must be reproducible; tampering must be detected and malformed packages rejected. Lifecycle/version information and applicable successor/superseded relationships must remain explicit. Historical packages must retain their historical meaning rather than be silently rewritten.
+- Acceptance requires reproducible evidence for all three approved verification levels:
+  - **Level 1 — Package Integrity:** independently validate supported package structure, canonical encoding, and commitment/hash, and detect tampering. Integrity success must not be represented as proof that all underlying evidence was true.
+  - **Level 2 — Authorized Provenance and Canton State:** where authorized and technically supported, validate supported origin, relevant Canton association/state, lifecycle, versions, timestamps, and provenance. Demonstrate the final supported Canton access mechanism.
+  - **Level 3 — Assessment Reproduction Where Supported:** rerun disclosed deterministic reference controls against authorized evidence/reference fixtures, reproduce the deterministic assessment result, and compare it with the recorded decision/proof.
+- Verification results must identify the level, applicable versions, properties checked, failures, trust assumptions, and limitations. Unavailable rules, evidence, state, authorization, or unsupported properties must produce explicit limitations instead of unconditional success.
+- Supported verification must run independently through the delivered standalone verifier/library/CLI/API interfaces, without requiring ProofSync, AuditSync, RegSync, DevSync, or another proprietary portal.
+
+### 4. Privacy, Authorization, and Governed Consumption
+
+- Positive and negative authorization tests must demonstrate that authorized consumers receive only role-permitted information and unauthorized consumers do not receive protected assurance/evidence information through tested interfaces. Consuming assurance/proof must not broadly disclose sensitive underlying evidence. Stakeholder portal access and workflow consumption must follow the approved authorization model; privacy claims must remain bounded by the tested and verified implementation.
+- Governed workflow tests must demonstrate consumption of current authorized decisions, accepted-policy handling of stale/expired/superseded decisions, appropriate target/action/purpose binding, and rejection of unauthorized actors. Required human approval must not be bypassable in tested workflows. Execution-gated patterns must not treat unavailable current assurance as automatic approval; execution gating is not required for every Canton workflow.
+
+### 5. Shared References and Bounded Agentic Governance
+
+- Deliver the Institutional Continuous Assurance reference implementation, Tokenized RWA / Settlement reference implementation, and bounded agentic financial-governance scenario. A reuse matrix and dependency/version manifests must demonstrate use of the same accepted shared assurance model, lifecycle, Portable Decision Package, Canonical Proof Package, SDK/interfaces, verifier, and authorization patterns where applicable. Separate bespoke proof engines, lifecycle systems, or verification implementations must not substitute for shared infrastructure.
+- The bounded agentic scenario must demonstrate APPROVED, DENIED, REQUIRE_APPROVAL, appropriately authorized human approval, bounded agent-to-agent delegation, attempted authority/delegation violation, action-integrity validation, execution lineage, and machine-verifiable proof. Required human approval must not be bypassable, and a delegated agent must not exceed its tested delegated authority. This gate applies only to the funded bounded scenario, not a general autonomous-finance platform.
+
+### 6. Developer Usability and Stakeholder Consumption
+
+- A non-author evaluator must complete documented setup, authentication, supported decision/package consumption, independent verification, and lifecycle-update processing from a clean supported environment without undocumented steps, bespoke code changes, or bespoke live CompliLedger employee assistance for the supported path. Documented credential provisioning is permitted. Any required intervention must be recorded, corrected in tooling/documentation where applicable, and the affected validation rerun. Acceptance depends on reproducibility and independence, not an arbitrary integration-time target.
+- Reproducible functional and authorization evidence must cover Canton-specific capabilities for all four portals:
+  - **ProofSync:** client-facing current assurance, decisions, proof, lifecycle, verification, and history.
+  - **AuditSync:** governed auditor access to authorized assessments, evidence lineage, decisions, proof, verification, and assurance history.
+  - **RegSync:** governed regulator access to authorized assurance, decisions, proof, verification, and permitted lineage/history.
+  - **DevSync:** developer access to the supported SDK, APIs, schemas, documentation, reference assets, and verification integration.
+- Portals consume the shared CompliLedger assurance infrastructure according to stakeholder role; acceptance must not attribute reasoning or proof generation to the portals.
+
+### 7. Security, Performance, and Operational Readiness
+
+- Provide a documented threat model, independent Canton/DAML/security review, privacy/authorization review, API/security testing, adversarial testing, remediation evidence, and retesting where scoped. Under the final approved severity policy, no unresolved release-blocking critical/high findings may remain at production acceptance; residual findings require documented disposition. The existing Milestone 6 requirement for no unresolved critical/high findings remains applicable and is not relaxed by this section.
+- Performance, multi-party, lifecycle-scale, failure/recovery, and supported upgrade tests must pass against approved criteria. Measure reassessment latency, synchronization/update lag, verification performance, representative multi-party workload behavior, failure recovery, and supported upgrade behavior.
+- Final numerical performance/recovery/compatibility thresholds must be documented against representative workloads and approved before the applicable acceptance test, not selected retrospectively after results are known.
+- Demonstrate deployment automation, monitoring, operational runbooks, incident/recovery procedures, compatibility documentation, and exercised supported recovery/upgrade procedures.
+
+### 8. Production Deployment and Knowledge Transfer
+
+- Final production acceptance requires an accepted deployment using the verified and approved Canton architecture/topology, with release/version and environment identification, deployment and monitoring evidence, authorized end-to-end assurance lifecycle validation, supported verification, and operational handover. A sandbox-only demonstration is insufficient.
+- Deployment prerequisites and topology must be authoritatively resolved before the production gate. No MainNet access, sponsor requirement, allowlisting arrangement, participant topology, or hosting model is assumed here.
+- Documentation and knowledge-transfer materials must correspond to the accepted release and cover applicable architecture, APIs, SDK, schemas, integration, verification, lifecycle, authorization, deployment, operations, recovery, supported versions, reference implementations, and known limitations.
+
+### 9. External Validation, Adoption, and Six-Month Maintenance
+
+- Provide evidence of the approved external developer validation, independent verification, onboarding, integration exercises, and ecosystem feedback. Adoption definitions, targets, counting rules, measurement windows, and distinctions between internal testing, external evaluation, test integration, and active integration must be approved before the relevant gate. Downloads, internally generated proofs, or internal tests alone must not be presented as external adoption.
+- Maintenance acceptance requires six complete months of bounded support beginning after accepted production launch. Implementation delays move the start of this period and must not consume it; elapsed time alone is insufficient.
+- Evidence must cover corrective/security releases where required, supported compatibility maintenance, SDK/documentation upkeep, issue triage, bounded developer/integration support, reference implementation upkeep, and adoption measurement. Supported integration/reference tests must remain passing, with issue and vulnerability handling evidenced against the approved policy.
+- Submit six monthly evidence reports, a final consolidated maintenance/adoption report, and a post-funded-period ownership/sustainability handover identifying continuing responsibilities and supported boundaries.
+
+### 10. Acceptance Scope Boundary
+
+Acceptance does not require rebuilding the entire private CompliLedger platform, open-sourcing proprietary reasoning implementation, broad new regulatory or connector libraries, multiple SDK languages, rebuilding unrelated portal foundations, customer-specific production applications, a standalone autonomous-finance product, unlimited integration support, or 24/7 managed-service support unless separately approved through formal scope change.
