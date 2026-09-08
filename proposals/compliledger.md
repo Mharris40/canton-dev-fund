@@ -3,7 +3,7 @@
 **Author:** Maranda Harris — Founder, CompliLedger  
 **Status:** Submitted  
 **Created:** 2026-09-08  
-**Label:** regulatory-compliance
+**Label:** Regulatory-Compliance
 **Champion:** Need Champion
 
 ---
@@ -341,3 +341,183 @@ Development periods overlap; acceptance dependencies remain sequential: **M1 →
   - Post-funded-period ownership/sustainability handover documenting remaining responsibilities and supported boundaries. Support is bounded and does not imply unlimited integration assistance or 24/7 managed-service support.
   - **Ecosystem value:** The production integration remains usable and maintained while external adoption and continuing ownership are evidenced after launch.
   - **Gate metric:** Six complete post-acceptance months are evidenced by six monthly reports and the final consolidated report; maintained release and supported integration/reference tests pass; support/adoption results are measured against pre-approved definitions and targets; no unresolved release-blocking issue lacks an approved disposition; sustainability handover is complete. Elapsed time alone is insufficient for acceptance.
+
+---
+
+## Acceptance Criteria
+
+The Tech &amp; Ops Committee will evaluate completion based on:
+
+- Deliverables completed as specified for each milestone  
+- Demonstrated functionality or operational readiness  
+- Documentation and knowledge transfer provided  
+- Alignment with stated value metrics  
+
+The following cross-cutting conditions supplement, rather than replace, milestone-specific deliverables and gates. They apply to the funded CompliLedger Canton implementation at the applicable acceptance stage. Unresolved technical baselines, prerequisites, thresholds, and policies must be documented and approved before the affected gate; they must not be treated as satisfied by omission.
+
+### 1. Traceability and Reproducible Validation
+
+- Every funded deliverable must map to its approved requirement/scope, source revision, artifact/version, test or validation procedure, acceptance evidence, and applicable milestone. Each submission must identify the exact release and environment evaluated.
+- Documented build/setup procedures must reproduce the build from a clean supported environment. All mandatory automated tests, conformance fixtures, and supported integration/reference tests must pass; deliberately invalid fixtures must produce their expected failures. The supported technical baseline and tooling versions will be established during architecture work.
+- Screenshots and demonstrations may supplement, but must not replace, reproducible artifacts, procedures, and test results.
+
+### 2. Continuous Assurance, Evidence Safety, and Determinism
+
+- **Mandatory lifecycle demonstration:** **State A — Current Assurance:** current, sufficient evidence supports the applicable determination. **Material Change:** a relevant operational/evidence condition changes or expires. **State B — Updated Assurance:** evidence is refreshed or insufficiency identified, reassessment occurs, and the deterministic decision and assurance state change appropriately; previous assurance is no longer represented as current. **Remediation:** the condition is corrected, new evidence is collected and validated, and reassessment occurs. **State C — Restored or Otherwise Updated Assurance:** a new deterministic decision, assurance state, and proof/package state are produced as appropriate, preserving historical and successor lineage.
+- The implemented model must functionally distinguish current, superseded, stale, expired, insufficient, and changed/not-satisfied assurance, plus suspended/revoked states where used. Equivalent terminology is permitted; loss of the applicable functional distinctions is not.
+- Negative tests must show that stale, insufficient, conflicting, or manual-review-required evidence does not automatically produce a satisfied determination. Unavailable sufficient deterministic evidence must yield an explicit limitation, not fabricated certainty.
+- Identical deterministic inputs, applicable control definitions, rule versions, and relevant evidence state must reproduce deterministic assessment/decision content. Run-specific timestamps, execution IDs, and correlation IDs may differ but must be distinguished from that content. AI-assisted interpretation or orchestration must not silently replace deterministic consequential control evaluation.
+- Duplicate/replayed events and interrupted processing must not leave contradictory current assurance; tested recovery and reconciliation must restore consistent lifecycle state.
+
+### 3. Portable Packages and Independent Verification
+
+- Portable Decision Packages and Canonical Proof Packages must conform to their accepted schemas/versions. Canonical encoding and commitments/hashes must be reproducible; tampering must be detected and malformed packages rejected. Lifecycle/version information and applicable successor/superseded relationships must remain explicit. Historical packages must retain their historical meaning rather than be silently rewritten.
+- Acceptance requires reproducible evidence for all three approved verification levels:
+  - **Level 1 — Package Integrity:** independently validate supported package structure, canonical encoding, and commitment/hash, and detect tampering. Integrity success must not be represented as proof that all underlying evidence was true.
+  - **Level 2 — Authorized Provenance and Canton State:** where authorized and technically supported, validate supported origin, relevant Canton association/state, lifecycle, versions, timestamps, and provenance. Demonstrate the final supported Canton access mechanism.
+  - **Level 3 — Assessment Reproduction Where Supported:** rerun disclosed deterministic reference controls against authorized evidence/reference fixtures, reproduce the deterministic assessment result, and compare it with the recorded decision/proof.
+- Verification results must identify the level, applicable versions, properties checked, failures, trust assumptions, and limitations. Unavailable rules, evidence, state, authorization, or unsupported properties must produce explicit limitations instead of unconditional success.
+- Supported verification must run independently through the delivered standalone verifier/library/CLI/API interfaces, without requiring ProofSync, AuditSync, RegSync, DevSync, or another proprietary portal.
+
+### 4. Privacy, Authorization, and Governed Consumption
+
+- Positive and negative authorization tests must demonstrate that authorized consumers receive only role-permitted information and unauthorized consumers do not receive protected assurance/evidence information through tested interfaces. Consuming assurance/proof must not broadly disclose sensitive underlying evidence. Stakeholder portal access and workflow consumption must follow the approved authorization model; privacy claims must remain bounded by the tested and verified implementation.
+- Governed workflow tests must demonstrate consumption of current authorized decisions, accepted-policy handling of stale/expired/superseded decisions, appropriate target/action/purpose binding, and rejection of unauthorized actors. Required human approval must not be bypassable in tested workflows. Execution-gated patterns must not treat unavailable current assurance as automatic approval; execution gating is not required for every Canton workflow.
+
+### 5. Shared References and Bounded Agentic Governance
+
+- Deliver the Institutional Continuous Assurance reference implementation, Tokenized RWA / Settlement reference implementation, and bounded agentic financial-governance scenario. A reuse matrix and dependency/version manifests must demonstrate use of the same accepted shared assurance model, lifecycle, Portable Decision Package, Canonical Proof Package, SDK/interfaces, verifier, and authorization patterns where applicable. Separate bespoke proof engines, lifecycle systems, or verification implementations must not substitute for shared infrastructure.
+- The bounded agentic scenario must demonstrate APPROVED, DENIED, REQUIRE_APPROVAL, appropriately authorized human approval, bounded agent-to-agent delegation, attempted authority/delegation violation, action-integrity validation, execution lineage, and machine-verifiable proof. Required human approval must not be bypassable, and a delegated agent must not exceed its tested delegated authority. This gate applies only to the funded bounded scenario, not a general autonomous-finance platform.
+
+### 6. Developer Usability and Stakeholder Consumption
+
+- A non-author evaluator must complete documented setup, authentication, supported decision/package consumption, independent verification, and lifecycle-update processing from a clean supported environment without undocumented steps, bespoke code changes, or bespoke live CompliLedger employee assistance for the supported path. Documented credential provisioning is permitted. Any required intervention must be recorded, corrected in tooling/documentation where applicable, and the affected validation rerun. Acceptance depends on reproducibility and independence, not an arbitrary integration-time target.
+- Reproducible functional and authorization evidence must cover Canton-specific capabilities for all four portals:
+  - **ProofSync:** client-facing current assurance, decisions, proof, lifecycle, verification, and history.
+  - **AuditSync:** governed auditor access to authorized assessments, evidence lineage, decisions, proof, verification, and assurance history.
+  - **RegSync:** governed regulator access to authorized assurance, decisions, proof, verification, and permitted lineage/history.
+  - **DevSync:** developer access to the supported SDK, APIs, schemas, documentation, reference assets, and verification integration.
+- Portals consume the shared CompliLedger assurance infrastructure according to stakeholder role; acceptance must not attribute reasoning or proof generation to the portals.
+
+### 7. Security, Performance, and Operational Readiness
+
+- Provide a documented threat model, independent Canton/DAML/security review, privacy/authorization review, API/security testing, adversarial testing, remediation evidence, and retesting where scoped. Under the final approved severity policy, no unresolved release-blocking critical/high findings may remain at production acceptance; residual findings require documented disposition. The existing Milestone 6 requirement for no unresolved critical/high findings remains applicable and is not relaxed by this section.
+- Performance, multi-party, lifecycle-scale, failure/recovery, and supported upgrade tests must pass against approved criteria. Measure reassessment latency, synchronization/update lag, verification performance, representative multi-party workload behavior, failure recovery, and supported upgrade behavior.
+- Final numerical performance/recovery/compatibility thresholds must be documented against representative workloads and approved before the applicable acceptance test, not selected retrospectively after results are known.
+- Demonstrate deployment automation, monitoring, operational runbooks, incident/recovery procedures, compatibility documentation, and exercised supported recovery/upgrade procedures.
+
+### 8. Production Deployment and Knowledge Transfer
+
+- Final production acceptance requires an accepted deployment using the verified and approved Canton architecture/topology, with release/version and environment identification, deployment and monitoring evidence, authorized end-to-end assurance lifecycle validation, supported verification, and operational handover. A sandbox-only demonstration is insufficient.
+- Deployment prerequisites and topology must be authoritatively resolved before the production gate. No MainNet access, sponsor requirement, allowlisting arrangement, participant topology, or hosting model is assumed here.
+- Documentation and knowledge-transfer materials must correspond to the accepted release and cover applicable architecture, APIs, SDK, schemas, integration, verification, lifecycle, authorization, deployment, operations, recovery, supported versions, reference implementations, and known limitations.
+
+### 9. External Validation, Adoption, and Six-Month Maintenance
+
+- Provide evidence of the approved external developer validation, independent verification, onboarding, integration exercises, and ecosystem feedback. Adoption definitions, targets, counting rules, measurement windows, and distinctions between internal testing, external evaluation, test integration, and active integration must be approved before the relevant gate. Downloads, internally generated proofs, or internal tests alone must not be presented as external adoption.
+- Maintenance acceptance requires six complete months of bounded support beginning after accepted production launch. Implementation delays move the start of this period and must not consume it; elapsed time alone is insufficient.
+- Evidence must cover corrective/security releases where required, supported compatibility maintenance, SDK/documentation upkeep, issue triage, bounded developer/integration support, reference implementation upkeep, and adoption measurement. Supported integration/reference tests must remain passing, with issue and vulnerability handling evidenced against the approved policy.
+- Submit six monthly evidence reports, a final consolidated maintenance/adoption report, and a post-funded-period ownership/sustainability handover identifying continuing responsibilities and supported boundaries.
+
+### 10. Acceptance Scope Boundary
+
+Acceptance does not require rebuilding the entire private CompliLedger platform, open-sourcing proprietary reasoning implementation, broad new regulatory or connector libraries, multiple SDK languages, rebuilding unrelated portal foundations, customer-specific production applications, a standalone autonomous-finance product, unlimited integration support, or 24/7 managed-service support unless separately approved through formal scope change.
+
+---
+
+## Funding
+
+**Total Funding Request:** $385,000 USD, payable in fixed Canton Coin under the Foundation-approved conversion methodology.
+
+The request is the bottom-up USD cost basis for the approved scope: implementation and Canton/DAML specialist work; integration and continuous assurance; independent verification and developer tooling; four Canton-specific portal integrations; two full reference implementations and a bounded agentic-governance scenario; external security review, remediation/retesting, production readiness and deployment; and ecosystem adoption with six complete months of post-launch maintenance/adoption support.
+
+### Cost Basis
+
+| Category | USD |
+| --- | ---: |
+| Expected direct delivery cost | $332,400 |
+| Embedded delivery risk allowance | $49,860 |
+| Rounding / program headroom | $2,740 |
+| **Total** | **$385,000** |
+
+The delivery risk allowance is embedded within the milestone budgets. It is not a separate milestone and does not create payment independent of accepted deliverables. It addresses integration, remediation, deployment, and delivery uncertainty; it is not a currency hedge or guaranteed protection against CC/USD movement. Neither the allowance nor program headroom creates a separate automatic payment entitlement or authorizes transfers between milestone allocations.
+
+### Payment Breakdown by Milestone
+
+- **M1 — Canton-Native Foundation:** USD reference allocation **$40,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M2 — Continuous Assurance and Deterministic Integration:** USD reference allocation **$63,500**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M3 — Portable Decisions, Proof Infrastructure, and Independent Verification:** USD reference allocation **$28,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M4 — Developer Platform and Stakeholder Portals:** USD reference allocation **$58,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M5 — Reference Workflows and Reusable Governance:** USD reference allocation **$70,500**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance.
+- **M6 — Security, Production Readiness, Ecosystem Validation, and Production Deployment:** USD reference allocation **$84,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon Committee acceptance of the production deployment and corresponding deliverables.
+- **M7 — Six-Month Maintenance and Ecosystem Adoption:** USD reference allocation **$41,000**; Canton Coin payment: **Fixed CC amount to be established under the approved conversion methodology**, payable upon final Committee acceptance of the maintenance/adoption deliverables and required evidence.
+- **Total:** USD reference allocation **$385,000**; **Fixed total CC award to be established at grant approval**.
+
+Each milestone payment is conditional on Committee acceptance of the corresponding milestone deliverables and required evidence, following the approved acceptance dependencies. The overlapping development schedule does not create payment entitlement. Payment is tied to accepted deliverables—not elapsed time. The USD allocations are cost references and do not guarantee a particular USD value of the CC received.
+
+### Volatility Stipulation
+
+If the project duration is **greater than 6 months**:  
+The grant is denominated in fixed Canton Coin and will require a re-evaluation at the 6-month mark.
+
+The approximately 15-month program—approximately nine months through accepted production launch followed by six complete months of maintenance/adoption support—therefore requires a formal six-month funding review. The grant effective date and corresponding review date must be established with the Foundation before final grant execution.
+
+The review will consider, as applicable, milestones accepted and in progress; remaining deliverables; payment status, including accepted-but-unpaid milestones; remaining fixed-CC allocations; material CC/USD movement; actual and forecast infrastructure/network costs; security-review and remediation costs; verified deployment requirements; approved scope changes; the production-launch forecast; and remaining M7 maintenance obligations.
+
+**The six-month re-evaluation is mandatory. Adjustment is not automatic.** Any proposed change to remaining CC amounts, milestone allocations, scope, acceptance conditions, or payment structure requires the applicable Foundation/Committee approval under the governing grant process and must be documented before taking effect. Review alone does not amend the award. This proposal creates no automatic repricing right or USD true-up, does not guarantee USD purchasing power, and does not assign all currency risk automatically to either party.
+
+### Grant-Execution Mechanics
+
+The full grant and all seven milestone allocations will be fixed in CC at grant approval under the Foundation-approved conversion methodology, subject only to subsequently approved amendments. Before final grant execution, the Foundation and CompliLedger must establish the approved CC/USD rate source, measurement/averaging window if applicable, fixing date, precision, rounding methodology, resulting fixed total CC award, and resulting fixed CC allocation for each milestone. These are grant-execution mechanics, not unresolved product-design decisions.
+
+### M7 Funding Treatment
+
+Milestone 7 begins only after accepted production launch under Milestone 6. Its six-month delivery period is separate from the grant’s mandatory six-month funding re-evaluation. If production launch moves, M7’s full six-month maintenance period moves with it; implementation delays do not shorten the maintenance obligation.
+
+The **$41,000 USD reference allocation** remains associated with M7 unless an approved amendment changes it. M7 payment remains subject to acceptance of the maintenance/adoption deliverables and required evidence, including six monthly reports and the final consolidated report under the approved acceptance criteria. Elapsed time alone is insufficient. Monthly reporting does not create automatic monthly payment entitlement.
+
+### Program Delay and Change Control
+
+Material Committee-requested scope changes, deployment-access changes, approved architecture changes, or funding amendments that affect remaining milestones must be documented through the applicable grant change/re-evaluation process and receive the required approvals. Changes to timing do not themselves reprice milestones, transfer allocations, or reduce the full post-launch maintenance period.
+
+---
+
+## Co-Marketing
+
+Upon production release, CompliLedger will collaborate with the Canton Foundation on:
+
+- Announcement coordination.
+- A technical blog or case study focused on reusable AI-native continuous assurance and proof infrastructure on Canton.
+- Developer/ecosystem promotion of the reusable SDK, verification tooling, reference implementations, and integration guidance.
+
+Public materials will distinguish demonstrated capabilities from planned capabilities. They will not disclose protected customer, enterprise, or evidence information.
+
+---
+
+## Motivation
+
+Institutional assurance still depends heavily on manual, fragmented, periodic, point-in-time processes, while financial infrastructure is becoming digital, tokenized, programmable, interconnected, and increasingly automated. Reconstructing assurance for each audit, counterparty, regulator, or internal workflow creates duplicated effort and leaves a gap between documented assessments and changing operational conditions.
+
+Canton participants would benefit from assurance that is continuously maintained and machine-verifiable rather than repeatedly assembled. Authorized institutions and their stakeholders could consume current, context-appropriate assurance while preserving privacy and checking supported properties independently, reducing repeated work without treating a historical determination as permanently valid.
+
+The proposed ecosystem value is shared infrastructure for applicability-aware assurance, automated evidence orchestration, deterministic decisions, and continuous reassessment. Portable Decision Packages, Canonical Proof Packages, independent verification, and authorized stakeholder and developer consumption would make those capabilities reusable across applications rather than confined to a single compliance interface.
+
+The intended operating-model shift is Manual → AI-Native; Periodic → Continuous; Point-in-Time → Real-Time / Near-Real-Time; Audit Prep → Audit-Ready; Reports → Machine-Verifiable Proof; and One-Time Assurance → Reusable, Continuous Operational Assurance. These are delivery objectives, not claims of universal automation or instantaneous updates: AI assists orchestration, consequential evaluations remain deterministic, and update timing depends on supported sources and operational constraints.
+
+The timing matters as regulated digital money and tokenized-asset activity develops, increasing the practical need to operationalize applicable requirements rather than merely describe them. Relevant context includes BSA/AML frameworks and <a href="https://www.fincen.gov/resources/statutes-regulations/guidance/application-fincens-regulations-certain-business-models">FinCEN guidance on virtual-currency business models</a>, <a href="https://ofac.treasury.gov/recent-actions/20211015">OFAC sanctions guidance for the virtual-currency industry</a>, and banking regulators' treatment of <a href="https://occ.gov/news-issuances/bulletins/2025/bulletin-2025-2.html">crypto-asset risk management</a> and <a href="https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-7.html">tokenized securities</a>. These illustrate digital-asset regulation and supervisory expectations, not a conclusion that every framework applies to every Canton participant. CompliLedger begins with applicability because obligations depend on the entity, activity, jurisdiction, and context; proof verification alone does not establish legal compliance.
+
+Canton would therefore gain more than another compliance application: it would gain reusable application-layer assurance infrastructure for institutional financial workflows, without requiring every application to independently rebuild the same assurance and verification machinery.
+
+---
+
+## Rationale
+
+A static proof establishes something about a prior state, while periodic reports alone become stale as conditions change. CompliLedger instead maintains assurance through material change → refreshed evidence → reassessment → updated deterministic decision → updated assurance/proof state. Proof is the verifiable output of this continuous process, not the entire product; hashing alone can establish integrity but cannot create continuous assurance.
+
+AI assists requirements interpretation, evidence orchestration, contextual analysis, structuring, and explanation. Consequential control evaluations and decisions remain deterministic and versioned so supported results can be reproduced and independently verified where the required rules and authorized evidence are available. This avoids the reproducibility limits of opaque AI-only decisions, while preventing insufficient or stale evidence from becoming unsupported certainty.
+
+Canton-native integration separates protected source evidence from the authorized assurance, decision, lifecycle, and proof information that institutional workflows need to consume. This supports privacy-aware multi-party coordination without broadly placing sensitive evidence on-ledger, an approach that would conflict with institutional disclosure boundaries.
+
+The reusable Canton layer is intended to provide shared specifications, integration components, SDK/interfaces, verification tooling, lifecycle patterns, and reference workflows that authorized Canton developers can integrate without rebuilding the same architecture. This directs Development Fund support toward reusable ecosystem infrastructure rather than a one-off proprietary integration and avoids duplicated application-specific assurance work. The private CompliLedger reasoning implementation remains distinct from this reusable layer, subject to the proposal's stated licensing and distribution boundaries.
+
+The preferred architecture combines AI-powered automation, deterministic decisioning, privacy-aware Canton integration, continuous reassessment, portable decisions, and independent verification into reusable institutional infrastructure.
