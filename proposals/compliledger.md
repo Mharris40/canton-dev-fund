@@ -181,3 +181,64 @@ Reproducible builds and automated tests will support performance and lifecycle-s
 Deployment will progress from local development/testing to shared Canton development/test environments where applicable, then production using the verified and approved topology. Architecture work will establish applicable hosting, participant, onboarding, sponsorship, allowlisting, access, and operating requirements from authoritative sources. No final topology, network access, or unconditional production date is assumed. Production release will follow security remediation, readiness validation, deployment checks, and operational handover under that approved architecture.
 
 After accepted production launch, six complete months of bounded maintenance and adoption support will cover corrective fixes, security updates, compatibility updates within the supported policy, SDK/documentation upkeep, issue triage, developer/integration support, reference maintenance, and adoption measurement. The period is not consumed by implementation delays and does not imply a 24/7 SLA, unlimited managed services, bespoke integrations, broad new connectors, new regulatory frameworks, or major architectural expansion. Support capacity, response policy, operating ownership, and adoption targets will be agreed separately; release records, support/issue logs, integration feedback, and adoption reporting will document the work delivered.
+
+### 3. Architectural Alignment
+
+#### 3.1 Application-Layer Role
+
+CompliLedger is proposed as application-layer assurance and proof infrastructure for Canton, not a change to the Canton protocol or a replacement for synchronizers, participant nodes, token standards, identity providers, custodians, systems of record, auditors, or regulators. Canton coordinates multi-party workflows; the shared CompliLedger layer will make applicable assurance conditions available as deterministic decisions, Portable Decision Packages, Canonical Proof Packages, lifecycle state, and supported independent verification. This contributes a reusable application implementation rather than asserting that Canton has a protocol-level assurance deficiency.
+
+#### 3.2 Fit with Institutional Multi-Party Architecture
+
+Canton's multi-party application model combines privacy and authorization with workflow coordination and application composability. These characteristics fit assurance exchanges in which parties collaborate around a financial action but retain distinct information-access rights. CompliLedger's deterministic decisions are intended to inform or govern those coordinated workflows, while selective sharing allows relevant assurance to be consumed without requiring every participant to receive the same underlying information. The specific mapping to supported Canton interfaces and synchronized workflows will be verified during technical design; no particular disclosure or synchronization mechanism is presumed here. Canton is a suitable institutional environment for this architecture, not the only technically possible one.
+
+#### 3.3 Privacy-Preserving Assurance
+
+Proof portability does not require evidence publicity. Enterprise, identity, financial, custody, and security systems, protected CompliLedger storage, and other authoritative sources may retain sensitive evidence while authorized consumers receive the decision, proof, provenance, and lifecycle information appropriate to their purpose. The intended stakeholder views are:
+
+- **Participant/client:** Current operational assurance and proof through ProofSync.
+- **Auditor:** Authorized assessments, evidence lineage, decisions, proof, and history through AuditSync.
+- **Regulator:** Governed assurance, decision, verification, and permitted lineage access through RegSync.
+- **Developer/application:** Authorized SDK/API consumption and verification integration through DevSync and the shared interfaces.
+
+These are differentiated views of the same assurance infrastructure, not separate determinations or an assumption of universal access. Exact Canton disclosure patterns remain subject to verification, including the confidentiality of package references and provenance metadata.
+
+#### 3.4 Lifecycle-Aware Assurance
+
+Programmable financial workflows need to distinguish a historical determination from assurance that remains applicable at the point of use. The proposed shared layer will maintain current assurance through material change, reassessment, updated decisions, and updated assurance/proof state, preserving historical lineage rather than attaching a static attestation indefinitely to an asset or transaction. Potentially changing conditions include asset or counterparty eligibility, governance approval, operational or custody conditions, applicable reserve-related conditions, security controls, authority/delegation, and settlement readiness. Canton applications can therefore be designed to consume current assurance and its limitations, not simply verify that a historical proof exists. This is an application-layer lifecycle capability, not a claim that network coordination establishes the truth of external evidence.
+
+#### 3.5 Composability Across Workflow Classes
+
+The same decision-consumption, lifecycle, freshness, authorization, proof-verification, and human-approval patterns are intended to support multiple application classes without a separate assurance architecture for each. Potential consumers include issuance, transfer, settlement, redemption, tokenized RWA and money, custody, collateral, governance, institutional controls, and governed automated execution. These are architectural reuse opportunities, not commitments to production integrations across every category. The funded demonstrations remain the two approved institutional references and bounded agentic extension. Reuse must preserve applicability, version, purpose, freshness, authorization, and stakeholder requirements; composability does not make a determination universally acceptable.
+
+#### 3.6 Shared Canton Ecosystem Infrastructure
+
+Subject to final licensing and distribution decisions, the ecosystem layer will provide reusable Canton/DAML components, Portable Decision Package and Canonical Proof Package specifications, assurance/lifecycle/provenance schemas, authorization patterns, APIs, one primary SDK, an independent verifier, conformance tests, synthetic fixtures, reference workflows, developer documentation, and deployment/integration guidance. These shared artifacts distinguish the project from a private connection usable only by CompliLedger.
+
+An authorized third-party Canton developer should be able to integrate supported components, consume supported packages, independently verify supported properties, and follow lifecycle updates without bespoke CompliLedger employee assistance or a proprietary portal. This independence applies to the shared integration and supported verification functions; it does not imply that the entire private reasoning platform becomes open source or that commercial services are available without agreed access terms.
+
+#### 3.7 Participant Integration Value
+
+Applications needing assurance may otherwise separately implement applicability consumption, evidence-state interfaces, deterministic decision consumption, lifecycle/freshness handling, proof packaging, verification, stakeholder access, and developer integration. The shared layer is intended to reduce this duplicated integration effort without assuming that every Canton participant currently builds all of these functions. It connects reusable interfaces to CompliLedger's AI-assisted evidence and deterministic reasoning capabilities rather than requiring participants to reconstruct an equivalent platform.
+
+The intended operational shift is from manual and periodic assurance assembly toward AI-native continuous evaluation, from point-in-time reports toward real-time or near-real-time updates within defined and measured operating conditions, and from repeated audit preparation toward maintained audit-ready information. Machine-verifiable proof and reusable decisions support that process; they do not replace continuous operational assurance. No cost-saving percentage, response-time guarantee, or automatic stakeholder acceptance is assumed.
+
+#### 3.8 Institutional Tokenization and External Conditions
+
+The proposed architecture fits institutional tokenization and asset-mobility use cases, including tokenized real-world assets and money, settlement, custody, collateral, asset servicing, and regulated financial applications. For a given workflow, relevant conditions may include organizational authority, approvals, asset eligibility, contractual obligations, governance, operational state, and evidence held in enterprise systems rather than on the ledger. CompliLedger's role is to translate applicable conditions into deterministic, lifecycle-aware, independently verifiable assurance that an authorized Canton application can consume. It does not replace asset records, custody responsibilities, or legal determinations, and it makes no claim about specific customers, market share, or regulatory compliance.
+
+#### 3.9 Bounded Governance for Emerging Agentic Finance
+
+Automated and agentic financial workflows are a future-facing reuse case for the same assurance layer. Autonomous execution does not imply unrestricted authority: identity and authority context, bounded delegation, applicable requirements, action/transaction limits, and human-approval conditions can define a governance boundary before execution. Action-integrity checks, execution lineage, and machine-verifiable governance proof can make the resulting activity inspectable afterward. The funded extension remains bounded and secondary to institutional continuous assurance; it is not a separate product or a claimed Canton Foundation priority. Specific ecosystem experimentation and project relationships are reserved for later verification before any named examples are included.
+
+#### 3.10 Complementing Existing Canton Infrastructure
+
+The proposal is intended to complement existing work across protocol infrastructure, token/asset standards, developer tooling, application infrastructure, and financial workflow composability. Protocol and token infrastructure define how supported assets and workflows operate; CompliLedger adds application-layer assurance about applicable conditions that those workflows may consume. Its package specifications, verifier, and integration interfaces are intended to work with supported ecosystem surfaces rather than establish competing token standards or replace participant infrastructure. Specific compatibility and funded-project relationships will require verification; none is presumed by this architectural positioning.
+
+#### 3.11 CIP Alignment — Pending Verification
+
+**Drafting note — CIP alignment:** Relevant Canton Improvement Proposals governing token interfaces, application integration, wallet/dApp interaction, authorization, or other applicable integration surfaces will be mapped during the dedicated technical verification pass before submission. The mapping will distinguish required dependencies from optional interoperability opportunities and record verified identifiers, status, and applicability to the selected design. No CIP number, implementation dependency, or conformance claim is asserted at this stage.
+
+#### 3.12 Architectural Outcome
+
+The intended result is a reusable assurance layer through which authorized Canton applications can consume continuously maintained deterministic decisions and independently verifiable proof alongside financial workflows. Sensitive evidence need not be broadly disclosed, each application need not build an equivalent assurance architecture, and stakeholders need not rely solely on static reports or proprietary portals for supported verification. Canton provides the workflow environment; CompliLedger makes the assurance supporting those workflows continuously evaluable, portable, and independently verifiable within explicit privacy, applicability, and authorization boundaries.
