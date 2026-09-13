@@ -3,28 +3,48 @@
 **Author:** Maranda Harris — Founder, CompliLedger  
 **Status:** Submitted  
 **Created:** 2026-09-08  
-**Label:** Regulatory-Compliance
+**Label:** regulatory-compliance
 **Champion:** Need Champion
+
+<div align="center">
+  <h3>CompliLedger × Canton</h3>
+  <p><strong>AI-Native Compliance &amp; Governance Infrastructure for Continuous Institutional Assurance</strong></p>
+  <p>Requirements → Evidence → Deterministic Decisions → Continuous Assurance → Machine-Verifiable Proof</p>
+  <p><strong>Problem:</strong> Institutional compliance and governance assurance is still heavily manual, periodic, and repeatedly reconstructed from documents and fragmented systems.</p>
+  <p><strong>Solution:</strong> CompliLedger determines applicability, collects and validates authorized evidence, assesses sufficiency, and produces deterministic decisions with continuously updated assurance.</p>
+  <p><strong>Canton Value:</strong> Reusable, authorized institutional infrastructure for multi-party workflows rather than one-off manual assurance assembly.</p>
+  <p><strong>Initial References:</strong> Institutional Continuous Assurance; Tokenized RWA / Settlement.</p>
+  <p><strong>Existing Foundation:</strong> Functioning platform, limited-control proof of concept, and built ProofSync portal.</p>
+  <p><strong>Grant Builds:</strong> The reusable Canton layer, not the entire private CompliLedger platform.</p>
+  <p><strong>Funding:</strong> $385,000 USD. <strong>Program:</strong> ~15 months (~9 through accepted production + six complete post-launch months). <strong>Milestones:</strong> Seven acceptance-based milestones.</p>
+</div>
+
+| From | To |
+| --- | --- |
+| Manual | AI-Native |
+| Periodic | Continuous |
+| Point-in-Time | Current / Near-Real-Time Assurance |
+| Audit Prep | Audit-Ready |
+| Reports | Machine-Verifiable Proof |
+| One-Time Assurance | Reusable Continuous Operational Assurance |
+
+**Thesis:** Canton enables institutional financial workflows to move digitally and privately. CompliLedger is designed to make the compliance and governance supporting those workflows continuously evaluated, current, and independently verifiable.
+
+Freshness and currentness depend on supported evidence, material-change detection, authorization, and defined processing limits; verification establishes only supported checked properties.
 
 ---
 
 ## Abstract
 
-Institutional assurance remains heavily manual, fragmented, periodic, and document-driven, with point-in-time assessments repeatedly assembled for audits, regulators, counterparties, and operational workflows. Meanwhile, financial infrastructure is becoming digital, tokenized, programmable, interconnected, and increasingly automated. Assurance must therefore do more than report a past condition: it must respond when the requirements, evidence, or operational conditions supporting a decision change.
+Financial infrastructure is becoming digital, tokenized, programmable, interconnected, and increasingly automated, yet institutional assurance is still commonly manual, fragmented, periodic, and document-driven. Organizations repeatedly reconstruct evidence and determinations for audits, regulators, counterparties, and operations even when the underlying requirements, controls, and operating conditions continue to change.
 
-CompliLedger is AI-Powered Proof Infrastructure. It brings requirements, target, context, and operational state into a continuous process that determines applicable controls, orchestrates and validates evidence, evaluates evidence sufficiency, and produces deterministic assessments and decisions. AI assists interpretation and evidence orchestration; machine-readable controls and deterministic evaluation logic produce consequential decisions, without forcing a satisfaction judgment when evidence is insufficient. Portable Decision Packages and Canonical Proof Packages make these outputs consumable and machine-verifiable, supporting independent verification and continuously updated assurance.
+CompliLedger is AI-native compliance and governance infrastructure and AI-Powered Proof Infrastructure. It takes requirements, target, context, and operational state into a continuous process that determines applicability and applicable controls, orchestrates authorized evidence collection and validation, assesses evidence sufficiency, and produces deterministic evaluations, decisions, and portable proof. AI assists interpretation and orchestration, but it does not independently determine consequential requirement satisfaction.
 
-CompliLedger changes assurance from a periodic reporting exercise into continuously maintained operational assurance. Material changes trigger refreshed evidence and reassessment, producing updated decisions and assurance states that distinguish current support from stale, insufficient, or no-longer-satisfied conditions. Remediation triggers further evaluation rather than leaving an earlier result in place. This shifts manual work toward AI-native processes, periodic assessments toward continuous evaluation, and point-in-time reports toward real-time or near-real-time assurance within defined operating conditions. Ongoing audit readiness and machine-verifiable proof replace repeated audit preparation and static reporting as the intended operating model. Proof is not the entire product: it is the independently verifiable output of a broader process that maintains reusable assurance as conditions change.
+CompliLedger is designed to reassess when evidence expires, approvals or authority change, operational conditions drift, controls or requirements change, or other material changes affect the supported determination. It preserves historical lineage while distinguishing current assurance from stale, insufficient, superseded, or otherwise changed states and communicates supported limitations where a determination cannot be made. Proof is the machine-verifiable output of that maintained process, not the entire product.
 
-Canton is particularly relevant to institutional multi-party financial workflows where privacy, authorization, selective information sharing, deterministic coordination, and composability matter. The proposed application-layer integration connects the assurance supporting financial value with the workflows through which that value moves, allowing authorized parties to consume and independently verify relevant decisions alongside financial activity. Sensitive underlying evidence remains in appropriate protected systems rather than being broadly published to a ledger. CompliLedger complements Canton and authoritative enterprise systems; it does not replace the protocol, systems of record, auditors, or regulators.
+For Canton participants, this can make applicable assurance reusable within privacy-aware institutional workflows involving tokenized RWA, settlement, stablecoins or tokenized money, custody, eligibility checks, governance approvals, banking controls, and governed AI-agent transactions. These are qualified potential use cases subject to applicable requirements, supported controls and evidence, authorized integration, and explicit processing limits; they do not create additional funded references, blanket regulatory applicability, or universal deployment claims.
 
-CompliLedger already exists as a functioning platform, with an existing limited-control proof of concept, and ProofSync is built. The complete reusable Canton-native implementation does not yet exist. The Development Fund project therefore funds neither the invention of CompliLedger nor the entire private commercial platform. It funds the Canton-native implementation, integration, productionization, security validation, deployment, ecosystem adoption, and post-launch maintenance needed to make its assurance capabilities consumable across Canton. Existing commercial capabilities remain distinct from the new shared integration layer.
-
-The funded output combines reusable Canton-native assurance/proof architecture and continuous reassessment integration with Portable Decision Packages, Canonical Proof Packages, independent verification, and governed workflow consumption. One primary developer SDK, documented interfaces, schemas, and Canton-specific integration for ProofSync, AuditSync, RegSync, and DevSync provide developer and stakeholder access without rebuilding unrelated portal foundations. Two reusable references—Institutional Continuous Assurance and Tokenized RWA / Settlement—will demonstrate changing assurance and reuse of the same infrastructure across institutional workflows. A bounded agentic financial-governance extension will demonstrate authority, delegation, human approval, and execution lineage within that common infrastructure, not as a separate product or the primary project justification.
-
-Canton receives more than a proof format: it gains reusable infrastructure through which participants can consume CompliLedger's AI-native continuous assurance capabilities. Internal teams, clients, counterparties, auditors, regulators, developers, financial applications, and appropriately governed automated workflows can access authorized decisions, proof, and assurance updates. Rather than every participant independently implementing applicability logic, evidence orchestration, continuous evaluation, decision generation, assurance lifecycle management, audit preparation, proof generation, and verification, shared components and interfaces make those capabilities reusable without exposing the private reasoning implementation. Authorized third parties should be able to integrate the supported components, consume packages, verify supported properties, and follow lifecycle changes without a proprietary portal or bespoke employee assistance. Reuse remains conditional on applicability, freshness, context, authorization, and stakeholder requirements; no proof automatically satisfies every regulation or stakeholder.
-
-**Total Funding Request: $385,000 USD.** Based on bottom-up delivery costing, the working program spans approximately 15 months: approximately nine months through accepted production launch, followed by six complete months of bounded post-launch maintenance and ecosystem adoption support. The funded delivery includes external security review, remediation and retesting, production-readiness testing, staged production deployment, documentation, external developer validation, and onboarding. Production launch remains subject to verified Canton deployment requirements and the approved topology. The six-month support period begins only after accepted production launch and is not consumed by implementation delays.
+CompliLedger already exists as a functioning platform, with a limited-control proof of concept and a built ProofSync portal, while the funded work creates the reusable Canton integration layer, lifecycle handling, portable decisions and proof, independent verifier, one primary SDK and interfaces, Canton-specific ProofSync/AuditSync/RegSync/DevSync integration, the two approved references, the bounded agentic extension, security review with remediation, accepted production deployment, ecosystem adoption support, and six complete post-launch maintenance months. Licensing, deployment, and reuse remain subject to the proposal's stated distribution terms, authorization boundaries, and verified production prerequisites. **$385,000 USD total; approximately nine months through accepted production launch plus six complete post-launch maintenance and adoption months.**
 
 ---
 
@@ -32,25 +52,40 @@ Canton receives more than a proof format: it gains reusable infrastructure throu
 
 ### 1. Objective
 
-The objective is to address a structural gap between institutional assurance and the financial workflows it supports. Assurance is commonly assembled through manual, fragmented, periodic, and document-driven processes, with evidence and determinations reconstructed for different stakeholders. Requirements arise from regulation and guidance, internal governance, contracts, industry standards, and security, operational, asset, or counterparty conditions. Organizations must determine what applies to a target and context, which controls are required, what evidence is sufficient, whether conditions are currently satisfied, and whether an earlier determination remains valid after circumstances change. The problem extends beyond audit efficiency: periodic assurance can leave decision-makers without a current basis for consequential actions.
+The objective is to solve a structural gap between institutional assurance and the financial workflows it supports. Today, requirements, controls, evidence, and determinations are often managed through manual, fragmented, periodic, and document-driven processes that must be reconstructed for different stakeholders. As financial activity becomes more digital, tokenized, programmable, interconnected, and automated, that repeated reconstruction can leave institutions without a current basis for consequential actions when conditions change.
 
-Evidence is distributed across enterprise systems, APIs, infrastructure, financial and identity systems, security platforms, blockchains, and other authoritative sources. As financial workflows become digital, tokenized, programmable, interconnected, and increasingly automated, a point-in-time report cannot necessarily establish that its supporting conditions still hold at a later issuance, transfer, settlement, or governance action. This is a reusable institutional infrastructure need, not a claim that every Canton workflow has the same deficiency. The intended end-state is assurance maintained as operational conditions change and available when authorized consumers need to assess a proposed action.
+The intended end state is continuously maintained operational assurance rather than a static point-in-time report. Current assurance should change when evidence expires, conditions drift, authority or approvals change, controls or requirements change, or remediation produces new evidence. Historical determinations must retain their original meaning, but consumers need a clear distinction between historical proof and what is currently supported for a proposed action at the point of use.
 
-CompliLedger is AI-Powered Proof Infrastructure. Its intended assurance model begins with requirements, target, context, and operational state; determines applicability and applicable controls; identifies evidence requirements; and automates evidence orchestration, validation, and normalization. Evidence sufficiency precedes deterministic control evaluation, assessment, and a concrete decision. Portable Decision Packages and Canonical Proof Packages make those results and relevant provenance available for authorized consumption and independent verification, with continuous reassessment maintaining their assurance context. Decisions must answer defined questions, such as whether a control is currently satisfied or whether applicable settlement conditions are met, rather than assert unqualified compliance.
+CompliLedger's operating model begins with requirements, target, context, and operational state; determines applicability and applicable controls; identifies evidence needs; orchestrates authorized evidence collection and validation; assesses sufficiency; and then produces deterministic evaluations and decisions. AI may assist interpretation, orchestration, and contextual analysis, but consequential determinations remain grounded in machine-readable rules and versioned deterministic inputs. Insufficient, stale, conflicting, or incomplete evidence must result in explicit limitations rather than unsupported satisfaction.
 
-AI supports interpretation, orchestration, and contextual work; consequential control evaluation and decisions remain grounded in machine-readable rules and versioned inputs. Identical deterministic inputs, evidence state, control definitions, and rule versions should yield reproducible assessment and decision results. Insufficient, stale, conflicting, or incomplete evidence must not be converted into unsupported satisfaction. Where a determination cannot be supported, the assurance state must communicate that limitation or the need for review. Authorized third parties must be able to independently verify supported properties rather than rely solely on CompliLedger's assertion.
+For Canton, the goal is reusable authorized assurance within institutional multi-party workflows, with privacy-aware consumption, lifecycle-aware freshness, and independent verification of supported properties. Authorized consumers should be able to receive relevant current decisions, proof, and lifecycle state without broad disclosure of protected underlying evidence, while recognizing that verification, freshness, and reuse remain bounded by supported evidence, authorization, context, versions, and defined processing limits. Governed agentic actions are a bounded reuse case within that same infrastructure, not a third full reference or the primary objective.
 
-Continuous assurance is a core capability of the shared Canton infrastructure; the reference implementations validate and demonstrate it. Current assurance must respond to material change through refreshed or newly evaluated evidence, reassessment, an updated deterministic decision, and updated assurance and proof state. Remediation, where applicable, leads to new evidence and further reassessment, producing restored or otherwise updated assurance. Historical lineage must preserve the meaning of earlier determinations while distinguishing current assurance from superseded, stale, expired, insufficient, or otherwise changed states. The objective is to replace manual reconstruction and periodic snapshots with AI-native continuous evaluation and maintained audit-ready information. Real-time or near-real-time responsiveness remains subject to defined operating conditions and later approved measurable thresholds. Proof is the independently verifiable output of that maintained process, not the entire objective.
-
-For Canton, the intended outcome is shared assurance that can be consumed within authorized institutional multi-party workflows, not merely a CompliLedger deployment. Participants and their authorized stakeholders should receive relevant current decisions, proof, lifecycle information, and verification access according to their roles and purposes. Internal teams, clients, counterparties, auditors, regulators, and applications need not receive the same information. Sensitive underlying evidence remains in appropriate protected systems, with privacy and authorization governing disclosure and consumption.
-
-CompliLedger already exists as a functioning platform, with a limited-control proof of concept and a built ProofSync portal. The complete reusable Canton-native implementation does not yet exist. The Development Fund objective is to create the shared Canton integration and ecosystem infrastructure that makes the mature assurance model usable within Canton, not to rebuild the private commercial platform or imply an existing Canton production deployment.
-
-Success should reduce duplicated engineering of applicability integration, evidence and assurance interfaces, continuous lifecycle handling, decision portability, proof packaging, verification, and stakeholder consumption. External developers should be able to integrate these shared capabilities through documented interfaces without bespoke employee assistance or a proprietary portal. Reuse remains conditional on applicability, evidence freshness, context, authorization, requirement and control versions, intended purpose, and stakeholder requirements; a decision or proof does not automatically satisfy another obligation or counterparty. The institutional assurance and bounded RWA/settlement references must demonstrate this common infrastructure across different workflow classes rather than separate bespoke implementations.
-
-Agentic financial workflows are a bounded future-facing use case, not the primary objective. The same infrastructure can support governed consequential autonomous actions by evaluating identity and authority, bounded delegation, applicable requirements, context, evidence, and approval requirements before execution, with human authorization where required and verifiable execution lineage afterward.
+CompliLedger already exists as a functioning platform, with a limited-control proof of concept and built ProofSync capabilities; the funded objective is the reusable Canton integration and ecosystem layer that makes those assurance capabilities consumable within Canton. The grant does not fund the invention of CompliLedger, the rebuild of the entire private commercial platform, or an implied existing production deployment. Subject to the proposal's licensing and distribution terms, supported interfaces, and verified deployment prerequisites, success means the shared Canton layer can be integrated and consumed without bespoke employee assistance for the supported path.
 
 ### 2. Implementation Mechanics
+
+**Implementation principle:** CompliLedger performs requirements interpretation, applicability, evidence orchestration, sufficiency assessment, deterministic evaluation, decisioning, and continuous reassessment. The Canton integration makes the resulting authorized assurance, decisions, lifecycle state, and proof reusable within institutional multi-party workflows.
+
+```mermaid
+flowchart LR
+    R[Requirements] --> TC[Target + Context]
+    TC --> A[Applicability]
+    A --> AC[Applicable Controls]
+    AC --> E[Evidence]
+    E --> ES[Evidence Sufficiency]
+    ES --> DE[Deterministic Evaluation]
+    DE --> D[Decision]
+    D --> PDP[Portable Decision Package]
+    PDP --> CPP[Canonical Proof Package]
+    CPP --> CC[Canton Consumption]
+    CC --> IV[Independent Verification]
+    IV --> CA[Continuous Assurance]
+    CA -. Material Change .-> E
+```
+
+This is a conceptual flow, not a mandatory execution order: verification can gate consumption, continuous reassessment does not wait for consumer verification, operational state informs applicability, and requirement, control, context, or authority changes may revisit earlier stages.
+
+Markdown fallback: Requirements → Target + Context → Applicability → Applicable Controls → Evidence → Evidence Sufficiency → Deterministic Evaluation → Decision → Portable Decision Package → Canonical Proof Package → Canton Consumption → Independent Verification → Continuous Assurance, with material change looping back to evidence.
 
 #### 2.1 Implementation Boundary
 
@@ -167,6 +202,13 @@ After accepted production launch, six complete months of bounded maintenance and
 
 ### 3. Architectural Alignment
 
+**Why Canton**
+
+- **Privacy:** Protected evidence can remain in authorized systems while authorized assurance and proof are consumed where needed.
+- **Multi-party workflows:** Institutional participants can consume authorized decisions and assurance inside coordinated workflows.
+- **Composability:** The same reusable patterns can support multiple workflow classes without separate assurance architectures.
+- **Lifecycle:** Canton applications can consume current assurance instead of relying indefinitely on historical proof.
+
 #### 3.1 Application-Layer Role
 
 CompliLedger is proposed as application-layer assurance and proof infrastructure for Canton, not a change to the Canton protocol or a replacement for synchronizers, participant nodes, token standards, identity providers, custodians, systems of record, auditors, or regulators. Canton coordinates multi-party workflows; the shared CompliLedger layer will make applicable assurance conditions available as deterministic decisions, Portable Decision Packages, Canonical Proof Packages, lifecycle state, and supported independent verification. This contributes a reusable application implementation rather than asserting that Canton has a protocol-level assurance deficiency.
@@ -241,6 +283,47 @@ No mandatory backward compatibility impact is expected for Canton applications t
 ---
 
 ## Milestones and Deliverables
+
+**What the Canton Ecosystem Receives**
+
+| Foundation | Developer Infrastructure | Institutional Workflows | Production |
+| --- | --- | --- | --- |
+| Canton/DAML integration | One primary SDK + APIs | Institutional Continuous Assurance reference | Independent security review |
+| Decision/proof specifications | Schemas | Tokenized RWA / Settlement reference | Remediation & retesting |
+| Continuous assurance lifecycle | Independent verifier | Governed workflow patterns | Production readiness |
+| Privacy/authorization patterns | Conformance tests | Bounded agentic governance | Accepted production deployment |
+| Version/provenance model | Developer documentation | Authorized stakeholder consumption | 6 complete months bounded support/adoption |
+
+The grant funds the reusable Canton layer that makes CompliLedger assurance consumable within Canton; it does not fund the invention of CompliLedger or the entire private commercial platform. Subject to final licensing and distribution terms, supported interfaces, authorization boundaries, and the verified deployment architecture, the funded output is reusable ecosystem infrastructure rather than a private one-off integration.
+
+**Potential Canton Use Cases**
+
+| Potential Canton Use Case | Qualified assurance question |
+| --- | --- |
+| Tokenized RWA | Is the asset or participant currently eligible for the proposed action? |
+| Settlement | Are the required current conditions satisfied before settlement? |
+| Stablecoins / Tokenized Money | Are the applicable issuance, reserve, redemption, governance, and operational conditions satisfied? |
+| Custody | Are the required authorization, operational, and custody conditions current? |
+| Banking Controls | Are the required controls satisfied on current evidence? |
+| Governance Approvals | Has the required authorized approval occurred and does it remain valid? |
+| AI-Agent Transactions | Are the required authority, conditions, and human approvals satisfied? |
+
+These are conditional use cases only, dependent on applicable requirements, supported controls and evidence, authorized integration, and stated processing limits. The only funded full references are **Institutional Continuous Assurance** and **Tokenized RWA / Settlement**; the bounded agentic governance scenario remains a reuse demonstration, not a third full reference.
+
+**Program Roadmap**
+
+| Milestone | Focus | Estimated Delivery | USD Reference Allocation |
+| --- | --- | --- | ---: |
+| M1 | Canton-Native Foundation | Month 2 | $40,000 |
+| M2 | Continuous Assurance Integration | Month 4 | $63,500 |
+| M3 | Portable Decisions &amp; Verification | Month 5 | $28,000 |
+| M4 | Developer Platform &amp; Portals | Month 6 | $58,000 |
+| M5 | Reference Workflows &amp; Governance | Month 7 | $70,500 |
+| M6 | Security &amp; Production Deployment | Month 9 | $84,000 |
+| M7 | Maintenance &amp; Adoption | Six complete months after accepted production | $41,000 |
+| **Total** |  |  | **$385,000** |
+
+These dates are estimates, not guaranteed acceptance dates. Production remains subject to verified prerequisites, any delay preserves the full six-month maintenance period rather than shortening it, and the USD figures are reference allocations only—they do not change the proposal's denomination, payment mechanics, or fixed-Canton-Coin methodology.
 
 Development periods overlap; acceptance dependencies remain sequential: **M1 → M2 → M3 → M4 → M5 → M6 → M7**. Work may proceed in parallel and is not required to wait for the preceding milestone payment. Acceptance depends on completed deliverables and reproducible evidence, not elapsed time. Each submission will identify the evaluated revision, artifacts, environment, and mandatory test results. Unresolved technical prerequisites and policies must be recorded and approved before the affected acceptance gate; thresholds and adoption targets must not be selected retrospectively.
 
@@ -355,6 +438,23 @@ The Tech &amp; Ops Committee will evaluate completion based on:
 
 The following cross-cutting conditions supplement, rather than replace, milestone-specific deliverables and gates. They apply to the funded CompliLedger Canton implementation at the applicable acceptance stage. Unresolved technical baselines, prerequisites, thresholds, and policies must be documented and approved before the affected gate; they must not be treated as satisfied by omission.
 
+**Acceptance at a Glance**
+
+| Area | Supplemental summary |
+| --- | --- |
+| Reproducibility | Clean builds and all mandatory tests must pass. |
+| Continuous Assurance | State A → Change → State B → Remediation → State C must be reproducibly demonstrated. |
+| Determinism | The same deterministic inputs and applicable versions must reproduce deterministic decision content. |
+| Verification | All three approved levels must have explicit prerequisites, failures, and limitations. |
+| Privacy | Positive and negative authorization tests must pass. |
+| Reuse | The same infrastructure must support both funded references. |
+| Developer usability | A non-author must complete the supported integration flow from a clean environment. |
+| Security | Independent review, remediation, and retesting are required, with no unresolved critical/high findings under the agreed severity model. |
+| Production | Accepted deployment must use the verified and approved production architecture. |
+| Sustainability | Six complete post-acceptance months, six monthly reports, and final consolidated reporting are required. |
+
+This summary is supplemental only and does not replace, narrow, or waive any detailed acceptance criteria or milestone gate below.
+
 ### 1. Traceability and Reproducible Validation
 
 - Every funded deliverable must map to its approved requirement/scope, source revision, artifact/version, test or validation procedure, acceptance evidence, and applicable milestone. Each submission must identify the exact release and environment evaluated.
@@ -426,6 +526,8 @@ Acceptance does not require rebuilding the entire private CompliLedger platform,
 ---
 
 ## Funding
+
+**Funding summary (supplemental):** $385,000 USD total; approximately nine months through implementation and accepted launch subject to verified prerequisites; six complete post-launch maintenance months; seven milestones; accepted deliverables and evidence remain the payment basis; fixed Canton Coin under the Foundation-approved methodology. This summary supplements only and does not change the conversion methodology, acceptance conditions, payment mechanics, mandatory six-month review, or amendment requirements below.
 
 **Total Funding Request:** $385,000 USD, payable in fixed Canton Coin under the Foundation-approved conversion methodology.
 
