@@ -172,8 +172,8 @@ All four portals consume the same underlying CompliLedger assurance infrastructu
 - **ProofSync:** Client-facing live assurance and proof visibility, including authorized control/evidence status, decisions, proof lifecycle, verification, assurance changes, and history/lineage. It does not perform applicability evaluation, evidence orchestration, deterministic reasoning, or proof generation.
 - **AuditSync:** Governed auditor access to authorized assessments, evidence lineage, decisions, proof, verification, assurance history, and audit-ready artifacts.
 - **RegSync:** Governed regulator access to relevant assurance, decisions, proof, verification, and lineage/history within privacy and disclosure boundaries.
-- **DevSync:** Developer access to APIs, SDK, schemas, documentation, reference implementations, proof consumption, and verification integration.
-
+- **DevSync:** Developer-facing live assurance and visibility into all findings and remediation plans
+  
 Shared query/event interfaces and permission mapping will keep stakeholder views associated with the relevant assurance versions and lifecycle updates. Portal or export access will not imply unrestricted evidence access. Missing general commercial portal prerequisites will be identified separately from funded Canton-specific work.
 
 #### 2.15 Developer and Reusability Model
